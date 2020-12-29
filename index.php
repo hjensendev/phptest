@@ -11,22 +11,18 @@ echo "supplied_code:" . $supplied_code . "</br>";
 
 if (empty($supplied_code))
 {
-    echo "<h2>400</h2>";
+    status_header(400, 'Bad Request');
 }
 
 
 if ($supplied_code === $valid_code)
 {
-    echo "<h2>204</h2>";
+    status_header(204, 'No Content');
 } 
 else 
 {
-    echo "<h2>403</h2>";
+    status_header(403, 'Forbidden');
 }
-
-
-phpinfo(INFO_VARIABLES);
-phpinfo(INFO_ENVIRONMENT);
 
 
 
