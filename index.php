@@ -4,14 +4,10 @@
 
 // Validate code before trying to download and process json
 $valid_code = getenv('FUNCTION_CODE'); 
-echo "<p>1</p>";
 $supplied_code = $_GET['code'];
-echo "<p>2</p>";
 if (empty($supplied_code))
 {
-    echo "<p>3</p>";
-    http_response_code(403); // ?code is not supplied
-    echo "<p>4</p>";
+    http_response_code(400); // ?code is not supplied
     exit;
 }
 
