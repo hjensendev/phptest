@@ -3,12 +3,8 @@
 <?php
 
 
-
-$query_param    = $_SERVER['QUERY_STRING'] === get_env_token('SAS_TOKEN');
-$automation_url = $_SERVER["REQUEST_URI"] === '/automation/update-cv-data/';
-
-echo "query_param:" . $query_param;
-echo "automation_url:" . $automation_url;
+$valid_code = env("FUNCTION_CODE");
+echo "valid_code:" . $£valid_code;
 
 phpinfo(INFO_VARIABLES);
 phpinfo(INFO_ENVIRONMENT);
@@ -16,7 +12,12 @@ phpinfo(INFO_ENVIRONMENT);
 
 
 
+// $END_POINT        = get_env_name('SAS_URL') . get_env_token('SAS_TOKEN');
+// $json_data        = @file_get_contents($END_POINT);
+// $GLOBALS['consultants_data'] = json_decode($json_data, TRUE);
 
+// $query_param    = $_SERVER['QUERY_STRING'] === get_env_token('SAS_TOKEN');
+// $automation_url = $_SERVER["REQUEST_URI"] === '/automation/update-cv-data/';
 
 // if ($json_data === FALSE) {
 //     status_header(500, 'Internal Server Error');
@@ -40,9 +41,6 @@ phpinfo(INFO_ENVIRONMENT);
 //     echo '<h1>404 Not Found</h1>';    
 // }
 
-
-// $json_data        = @file_get_contents($END_POINT);
-// $GLOBALS['consultants_data'] = json_decode($json_data, TRUE);
 
 
 
