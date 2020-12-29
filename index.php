@@ -1,5 +1,3 @@
-<h1>Test PHP Application</h1>
-
 <?php
 
 $valid_code = getenv('FUNCTION_CODE'); 
@@ -50,8 +48,5 @@ else
 //     status_header(404, 'Not Found');
 //     echo '<h1>404 Not Found</h1>';    
 // }
-
-
-
 
 ?>
