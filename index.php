@@ -7,7 +7,6 @@
 $query_param    = $_SERVER['QUERY_STRING'] === get_env_token('SAS_TOKEN');
 $automation_url = $_SERVER["REQUEST_URI"] === '/automation/update-cv-data/';
 
-echo "END_POINT:" . $END_POINT;
 echo "query_param:" . $query_param;
 echo "automation_url:" . $automation_url;
 
