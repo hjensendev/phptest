@@ -3,7 +3,10 @@
 <?php
 
 $valid_code = getenv('FUNCTION_CODE');
+$supplied_code = $_GET['code'];
+
 echo "valid_code:" . $valid_code;
+echo "supplied_code:" . $supplied_code;
 
 phpinfo(INFO_VARIABLES);
 phpinfo(INFO_ENVIRONMENT);
