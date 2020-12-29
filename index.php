@@ -1,7 +1,4 @@
 <?php
-
-
-
 // Validate code before trying to download and process json
 $valid_code = getenv('FUNCTION_CODE'); 
 $supplied_code = $_GET['code'];
@@ -31,5 +28,4 @@ function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
 }
-
 ?>
