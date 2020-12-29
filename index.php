@@ -27,6 +27,5 @@ try {
 function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
-    force_crash();
 }
 ?>
