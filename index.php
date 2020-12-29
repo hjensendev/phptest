@@ -24,8 +24,6 @@ if ($supplied_code !== $valid_code)
 
 try {
     DownloadAndProcessJSON()
-    http_response_code(204);
-    exit;
 } catch (Exception $e) {
     echo $e;
     http_response_code(500);
@@ -35,7 +33,8 @@ try {
 function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
-    $a = 1;
+    http_response_code(204);
+    exit;
 }
 
 ?>
