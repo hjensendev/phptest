@@ -2,9 +2,8 @@
 
 <?php
 
-
 $valid_code = getenv('FUNCTION_CODE');
-echo "valid_code:" . $£valid_code;
+echo "valid_code:" . $valid_code;
 
 phpinfo(INFO_VARIABLES);
 phpinfo(INFO_ENVIRONMENT);
