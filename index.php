@@ -2,6 +2,7 @@
 
 <?php
 
-phpinfo();
+phpinfo(INFO_VARIABLES);
+phpinfo(INFO_ENVIRONMENT);
 
 ?>
