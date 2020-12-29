@@ -9,15 +9,14 @@ if (empty($supplied_code))
 }
 
 
-if ($supplied_code === $valid_code)
-{
-    http_response_code(204);
-} 
-else 
+if ($supplied_code !== $valid_code)
 {
     http_response_code(403);
-}
+} 
 
+
+//Process stuff
+http_response_code(204);
 
 
 // $END_POINT        = get_env_name('SAS_URL') . get_env_token('SAS_TOKEN');
