@@ -19,7 +19,7 @@ function get_env_name($envname)
     return getenv($envname);
 }
 
-function get_env_name($envname)
+function get_env_token($envname)
 {
     return "?sv=" . get_env_token($envname);
 }
