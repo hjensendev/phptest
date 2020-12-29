@@ -23,19 +23,15 @@ if ($supplied_code !== $valid_code)
 } 
 
 try {
-    ProcessStuff()
+    DownloadAndProcessJSON()
     http_response_code(204);
 } catch (Exception $e) {
     echo $e;
     http_response_code(500);
 }
 
-function ProcessStuff()
+function DownloadAndProcessJSON()
 {
-    $END_POINT = get_env_name('SAS_URL') . get_env_token('SAS_TOKEN');
-    $query_param = $_SERVER['QUERY_STRING'] === get_env_token('SAS_TOKEN');
-    $json_data = @file_get_contents($END_POINT);
-    $GLOBALS['consultants_data'] = json_decode($json_data, TRUE);
     //Execute rest of bussiness logic here...
 }
 
