@@ -4,6 +4,10 @@
 $valid_code = getenv('FUNCTION_CODE'); 
 $supplied_code = $_GET['code'];
 
+set_error_handler(function () {
+    throw new Exception('Error when processing');
+});
+
 if (empty($supplied_code))
 {
     http_response_code(400);
