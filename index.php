@@ -18,6 +18,10 @@ if (empty($supplied_code))
 if ($supplied_code === $valid_code)
 {
     echo "<h2>204</h2>";
+} 
+else 
+{
+    echo "<h2>403</h2>";
 }
 
 
