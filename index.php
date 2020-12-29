@@ -2,6 +2,6 @@
 
 <?php
 
-echo "php foo";
+phpinfo();
 
 ?>
