@@ -1,7 +1,12 @@
 <?php
 
+
 $valid_code = getenv('FUNCTION_CODE'); 
 $supplied_code = $_GET['code'];
+
+set_error_handler(function () {
+    throw new Exception('Ach!');
+});
 
 if (empty($supplied_code))
 {
