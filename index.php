@@ -5,7 +5,7 @@ $valid_code = getenv('FUNCTION_CODE');
 $supplied_code = $_GET['code'];
 
 set_error_handler(function () {
-    throw new Exception('Ach!');
+    throw new Exception('Error when processing');
 });
 
 if (empty($supplied_code))
@@ -29,8 +29,7 @@ try {
     $b = 0;
     $c = $a/$b;
     http_response_code(204);
-} catch (Exception $e) {
-    echo $e;
+} catch {
     http_response_code(500);
 }
 
