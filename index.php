@@ -5,17 +5,17 @@ $supplied_code = $_GET['code'];
 
 if (empty($supplied_code))
 {
-    status_header(400, 'Bad Request');
+    http_response_code(400);
 }
 
 
 if ($supplied_code === $valid_code)
 {
-    status_header(204, 'No Content');
+    http_response_code(204);
 } 
 else 
 {
-    status_header(403, 'Forbidden');
+    http_response_code(403);
 }
 
 
