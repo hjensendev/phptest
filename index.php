@@ -5,10 +5,6 @@
 $valid_code = getenv('FUNCTION_CODE'); 
 $supplied_code = $_GET['code'];
 
-echo "valid_code:" . $valid_code . "</br>";
-echo "supplied_code:" . $supplied_code . "</br>";
-
-
 if (empty($supplied_code))
 {
     status_header(400, 'Bad Request');
