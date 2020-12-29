@@ -8,7 +8,7 @@ set_error_handler(function () {
 function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
-    echo "<h1>OK</h1>
+    echo "<h1>OK</h1>";
     exit;
 }
 
