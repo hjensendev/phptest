@@ -3,7 +3,7 @@
 <?php
 
 
-$valid_code = env("FUNCTION_CODE");
+$valid_code = getenv('FUNCTION_CODE');
 echo "valid_code:" . $£valid_code;
 
 phpinfo(INFO_VARIABLES);
