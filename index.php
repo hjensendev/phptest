@@ -27,6 +27,6 @@ try {
 function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
-    $a = 4/0;
+    force_crash();
 }
 ?>
