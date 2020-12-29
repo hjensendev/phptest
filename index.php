@@ -8,9 +8,6 @@ $supplied_code = $_GET['code'];
 echo "valid_code:" . $valid_code . "</br>";
 echo "supplied_code:" . $supplied_code . "</br>";
 
-phpinfo(INFO_VARIABLES);
-phpinfo(INFO_ENVIRONMENT);
-
 
 if (empty($supplied_code))
 {
@@ -22,6 +19,10 @@ if ($supplied_code === $valid_code)
 {
     echo "<h2>204</h2>";
 }
+
+
+phpinfo(INFO_VARIABLES);
+phpinfo(INFO_ENVIRONMENT);
 
 
 
