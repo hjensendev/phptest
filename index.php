@@ -6,12 +6,14 @@ $supplied_code = $_GET['code'];
 if (empty($supplied_code))
 {
     http_response_code(400);
+    exit;
 }
 
 
 if ($supplied_code !== $valid_code)
 {
     http_response_code(403);
+    exit;
 } 
 
 
