@@ -8,7 +8,7 @@ set_error_handler(function () {
 function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
-    echo "<h1>OK</h1>";
+    http_response_code(205);
     exit;
 }
 
@@ -29,7 +29,7 @@ if ($supplied_code !== $valid_code)
 } 
 
 try {
-    DownloadAndProcessJSON()
+    DownloadAndProcessJSON();
 } catch (Exception $e) {
     echo $e;
     http_response_code(500);
