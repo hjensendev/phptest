@@ -22,7 +22,7 @@ try {
     //Process stuff
     $a = 5;
     $b = 0;
-    $c = a/b;
+    $c = $a/$b;
     http_response_code(204);
 } catch (Exception $e) {
     echo $e;
