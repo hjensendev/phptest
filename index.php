@@ -5,6 +5,12 @@ set_error_handler(function () {
     throw new Exception('Error when processing');
 });
 
+function DownloadAndProcessJSON()
+{
+    //Execute rest of bussiness logic here...
+    http_response_code(204);
+    exit;
+}
 
 // Validate code before trying to download and process json
 $valid_code = getenv('FUNCTION_CODE'); 
@@ -30,11 +36,5 @@ try {
     exit;
 }
 
-function DownloadAndProcessJSON()
-{
-    //Execute rest of bussiness logic here...
-    http_response_code(204);
-    exit;
-}
 
 ?>
