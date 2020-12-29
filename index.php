@@ -17,8 +17,18 @@ if ($supplied_code !== $valid_code)
 } 
 
 
-//Process stuff
-http_response_code(204);
+
+try {
+    //Process stuff
+    $a = 5;
+    $b = 0;
+    $c = a/b;
+    http_response_code(204);
+} catch (Exception $e) {
+    echo $e;
+    http_response_code(500);
+}
+
 
 
 // $END_POINT        = get_env_name('SAS_URL') . get_env_token('SAS_TOKEN');
