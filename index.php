@@ -12,7 +12,7 @@ phpinfo(INFO_VARIABLES);
 phpinfo(INFO_ENVIRONMENT);
 
 
-if ($supplied_code === NULL)
+if (empty($supplied_code))
 {
     echo "<h2>400</h2>";
 }
