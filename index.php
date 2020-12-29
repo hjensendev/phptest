@@ -4,7 +4,6 @@
 
 
 
-$END_POINT      = get_env_name('SAS_URL') . get_env_token('SAS_TOKEN');
 $query_param    = $_SERVER['QUERY_STRING'] === get_env_token('SAS_TOKEN');
 $automation_url = $_SERVER["REQUEST_URI"] === '/automation/update-cv-data/';
 
@@ -15,15 +14,6 @@ echo "automation_url:" . $automation_url;
 phpinfo(INFO_VARIABLES);
 phpinfo(INFO_ENVIRONMENT);
 
-function get_env_name($envname)
-{
-    return getenv($envname);
-}
-
-function get_env_token($envname)
-{
-    return "?sv=" . get_env_token($envname);
-}
 
 
 
