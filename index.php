@@ -12,7 +12,7 @@ $supplied_code = $_GET['code'];
 
 if (empty($supplied_code))
 {
-    http_response_code(400); // ?code is not supplied
+    http_response_code(403); // ?code is not supplied
     exit;
 }
 
