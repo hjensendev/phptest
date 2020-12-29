@@ -4,6 +4,10 @@
 $valid_code = getenv('FUNCTION_CODE'); 
 $supplied_code = $_GET['code'];
 
+set_error_handler(function () {
+    throw new Exception('Error when processing');
+});
+
 if (empty($supplied_code))
 {
     http_response_code(400);
@@ -21,8 +25,11 @@ if ($supplied_code !== $valid_code)
 
 try {
     //Process stuff
+    $a = 5;
+    $b = 0;
+    $c = $a/$b;
     http_response_code(204);
-} catch {
+} catch (Exception $e) {
     http_response_code(500);
 }
 
