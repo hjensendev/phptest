@@ -1,9 +1,5 @@
 <?php
 
-// Add error handler
-set_error_handler(function () {
-    throw new Exception('Error when processing');
-});
 
 
 // Validate code before trying to download and process json
