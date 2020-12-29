@@ -8,7 +8,7 @@ set_error_handler(function () {
 function DownloadAndProcessJSON()
 {
     //Execute rest of bussiness logic here...
-    http_response_code(205);
+    http_response_code(204);
     exit;
 }
 
