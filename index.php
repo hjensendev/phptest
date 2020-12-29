@@ -30,6 +30,7 @@ try {
     $c = $a/$b;
     http_response_code(204);
 } catch (Exception $e) {
+    echo $e;
     http_response_code(500);
 }
 
